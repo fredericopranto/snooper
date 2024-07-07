@@ -81,8 +81,8 @@ abstract class AbstractSonarCloudQueryExecutor {
 
 
     public void setSonarToken(String sonarToken) {
-        if(sonarToken == null || sonarToken.trim().isEmpty())
-            throw new IllegalArgumentException("invalid Sonar Cloud API Token: "+sonarToken);
+        //if(sonarToken == null || sonarToken.trim().isEmpty())
+            //throw new IllegalArgumentException("invalid Sonar Cloud API Token: "+sonarToken);
         this.sonarToken = sonarToken;
     }
 

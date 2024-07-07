@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'br.com.jadson'
-version = '2.13'
+version = '2.14'
 sourceCompatibility = '11'
 
 configurations {
@@ -52,6 +52,6 @@ dependencies {
 
 }
 
-test {
-	useJUnitPlatform()
-}
+//test {
+//	useJUnitPlatform()
+//}
