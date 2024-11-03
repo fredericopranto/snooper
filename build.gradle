@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'br.com.jadson'
-version = '2.14'
+version = '2.15'
 sourceCompatibility = '11'
 
 configurations {
@@ -12,22 +12,24 @@ configurations {
 	}
 }
 
+jar {
+	destinationDirectory = file('C:\\work\\TCERN\\sistemas\\holter-devops-app\\libs')
+}
+
+
 repositories {
 	mavenCentral()
-	jcenter()
-	maven { url "https://repo.spring.io/plugins-release/" }
-
 }
 
 dependencies {
-
 	// rest template
-	implementation group: 'org.springframework', name: 'org.springframework.web', version: '3.2.2.RELEASE'
+	implementation group: 'org.springframework', name: 'spring-web', version: '3.2.18.RELEASE'
 
 	// json processing
 	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.13.3'
 	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.13.3'
 	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.3'
+
 
 	// file manipulation
 	implementation 'commons-io:commons-io:2.6'
@@ -48,10 +50,10 @@ dependencies {
 	implementation group: 'net.lingala.zip4j', name: 'zip4j', version: '2.4.0'
 
 	// junit 5
-	testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.6.2'
+	testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.9.0'
 
 }
 
-//test {
-//	useJUnitPlatform()
-//}
+test {
+	useJUnitPlatform()
+}
